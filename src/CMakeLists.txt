@@ -3,5 +3,6 @@ project(test)
 
 include_directories(Include)
 
-add_executable(server server.c)
-add_executable(client client.c)
+set(SOURCES main.c Include/linkedlist.c Include/linkedlist.h)
+
+add_executable(main.o ${SOURCES})
