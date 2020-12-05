@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  gcc:
+    image: vpemfh7/c-environ:latest
+    container_name: gcc-compiler
+    tty: true
+    volumes: 
+      - ./src:/opt/src
