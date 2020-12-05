@@ -111,84 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named client
+# Target rules for targets named main.o
 
 # Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 client
-.PHONY : client
+main.o: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main.o
+.PHONY : main.o
 
 # fast build rule for target.
-client/fast:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-.PHONY : client/fast
+main.o/fast:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/build
+.PHONY : main.o/fast
 
-#=============================================================================
-# Target rules for targets named server
+Include/linkedlist.o: Include/linkedlist.c.o
 
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-client.o: client.c.o
-
-.PHONY : client.o
+.PHONY : Include/linkedlist.o
 
 # target to build an object file
-client.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.o
-.PHONY : client.c.o
+Include/linkedlist.c.o:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/Include/linkedlist.c.o
+.PHONY : Include/linkedlist.c.o
 
-client.i: client.c.i
+Include/linkedlist.i: Include/linkedlist.c.i
 
-.PHONY : client.i
+.PHONY : Include/linkedlist.i
 
 # target to preprocess a source file
-client.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.i
-.PHONY : client.c.i
+Include/linkedlist.c.i:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/Include/linkedlist.c.i
+.PHONY : Include/linkedlist.c.i
 
-client.s: client.c.s
+Include/linkedlist.s: Include/linkedlist.c.s
 
-.PHONY : client.s
+.PHONY : Include/linkedlist.s
 
 # target to generate assembly for a file
-client.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.s
-.PHONY : client.c.s
+Include/linkedlist.c.s:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/Include/linkedlist.c.s
+.PHONY : Include/linkedlist.c.s
 
-server.o: server.c.o
+main.o: main.c.o
 
-.PHONY : server.o
+.PHONY : main.o
 
 # target to build an object file
-server.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.o
-.PHONY : server.c.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/main.c.o
+.PHONY : main.c.o
 
-server.i: server.c.i
+main.i: main.c.i
 
-.PHONY : server.i
+.PHONY : main.i
 
 # target to preprocess a source file
-server.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.i
-.PHONY : server.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/main.c.i
+.PHONY : main.c.i
 
-server.s: server.c.s
+main.s: main.c.s
 
-.PHONY : server.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-server.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.s
-.PHONY : server.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/main.o.dir/build.make CMakeFiles/main.o.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -198,14 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... client"
-	@echo "... server"
-	@echo "... client.o"
-	@echo "... client.i"
-	@echo "... client.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
+	@echo "... main.o"
+	@echo "... Include/linkedlist.o"
+	@echo "... Include/linkedlist.i"
+	@echo "... Include/linkedlist.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
