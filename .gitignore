@@ -55,5 +55,4 @@ dkms.conf
 CMakeFiles/
 bin/
 CMakeCache.txt
-Makefile
 *.cmake
