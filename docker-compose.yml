@@ -2,7 +2,8 @@ version: '3'
 
 services:
   gcc:
-    image: vpemfh7/c-environ:latest
+    build:
+      context: .
     container_name: gcc-compiler
     tty: true
     volumes: 
